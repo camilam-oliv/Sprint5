@@ -4,7 +4,7 @@ import plotly.express as px
 
 
 car_data = pd.read_csv('vehicles.csv')
-hist_button = st.button('Criar histrograma')
+hist_button = st.button('Criar um histrograma')
 
 st.header('Análise de carros')
 
@@ -17,6 +17,15 @@ if hist_button:# se o botão for clicado
 
     st.plotly_chart(fig, use_container_width=True)
     #exibir um gráfico plotly interativo
+
+scatter_button = st.button("Criar um gráfico de dispersão")
+
+if scatter_button:
+    st.write("Criando um gráfico de dispersão com o conjunto de dados")
+
+    fig = px.scatter(car_data, x="odometer", y="price", color= "condition")
+
+    st.plotly_chart(fig, use_container_width=True)
 
 
 
