@@ -12,7 +12,7 @@ hist_button = st.button('Criar um histrograma')
 
 if hist_button:# se o botão for clicado
     #escrever uma mensagem
-    st.write('Criando um histrograma para o conjunto de dados de anúncios de vendas de caros')
+    st.write('Criando um histrograma para o conjunto de dados')
 
     fig = px.histogram(car_data, x="odometer")
     #criar um histrograma
