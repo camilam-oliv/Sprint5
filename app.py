@@ -4,9 +4,11 @@ import plotly.express as px
 
 
 car_data = pd.read_csv('vehicles.csv')
-hist_button = st.button('Criar um histrograma')
 
 st.header('Análise de carros')
+
+hist_button = st.button('Criar um histrograma')
+
 
 if hist_button:# se o botão for clicado
     #escrever uma mensagem
